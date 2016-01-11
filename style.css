@@ -24,6 +24,15 @@ p:first-of-type {
 .point {
     /*border: 1px solid red;*/
 }
+    .masthead,
+    .author-page,
+    .title-page,
+    .publisher-page,
+    .dedication-page {
+        padding-top: 20vh;
+        height: 181mm;
+        display: block;
+    }
 
 figure {
     margin: 0;
