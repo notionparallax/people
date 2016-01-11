@@ -25,6 +25,14 @@ p:first-of-type {
     /*border: 1px solid red;*/
 }
 
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: right;
+}
+
 span.footnote {
     display: block;
     width: 50mm;
@@ -33,11 +41,28 @@ span.footnote {
     font-size: 80%;
     text-indent: -1em;
 }
+span.footnote-anchor::before {
+    content: "*";
+    color: red;
+}
+
+img.penguin-logo {
+    mix-blend-mode: multiply;
+    height: 10em;
+    transform: scaleX(-1);
+}
 
 @media print {
     @page {
         size: 111mm 181mm;
         margin: 0;
+        counter-reset: footnote 0;
+    }
+    @page {
+        @footnote {
+            border-top: dashed red 1px;
+            float: bottom;
+        }
     }
     h1 {
         page-break-before: always;
@@ -81,7 +106,25 @@ span.footnote {
     .title-page h1 {
         font-style: italic;
     }
+    /*span.footnote {
+        display: initial;
+        width: initial;
+        position: initial;
+        left: initial;
+        font-size: initial;
+        text-indent: initial;
+    }*/
     span.footnote {
-        left: 126mm;
+        float: footnote;
+        counter-increment: footnote;
+    }
+    .footnote::footnote-call {
+        content: counter(footnote, decimal) " ";
+        color: green;
+    }
+    .footnote::footnote-marker {
+        content: counter(footnote, lower-roman);
+        font-size: 14px;
+        color: blue;
     }
 }
