@@ -1,6 +1,6 @@
 body {
     margin: 0 auto;
-    width: 90vw;
+    width: 30em;
     background-color: rgba(234, 228, 197, 0.75);
     font-size: 19px;
     font-family: Orbi, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, 'Times New Roman', serif;
@@ -9,32 +9,30 @@ body {
 h1,h2,h3,h4 {    
     font-weight: normal;
 }
-
-.book{max-width: 650px;}
-.pages{
-    float: right;
-    width: 740px;
-    img {
-        width: 100%;
-    }
+h2 {
+    margin-bottom: 5em;
 }
 
 p {
     line-height: 1.4;
     margin: 0.2em 0;
     text-indent: 1em;
+    text-align: justify;
 }
 p:first-of-type {
     text-indent: 0;
 }
-
-.chapter {
-    /*border: 1px solid black;*/
+figure {
+    margin: 0 0 2em 0;
+    blockquote{
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        p{text-align: left;}
+    }
+    figcaption {}
 }
 
-.point {
-    /*border: 1px solid red;*/
-}
 .masthead,
 .author-page,
 .title-page,
@@ -43,7 +41,7 @@ p:first-of-type {
 .blank-page {
     height:  243.2mm;
     display: block;
-    border: 1px solid;
+    //border: 1px solid;
 }
 .masthead {
     padding-top: 2em;
@@ -109,13 +107,6 @@ section.contents{
         margin: 0 0 2em -1em;
         font-size: 90%;
     }
-}
-figure {
-    margin: 0;
-}
-
-figcaption {
-    text-align: right;
 }
 
 span.footnote {
