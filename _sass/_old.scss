@@ -3,7 +3,7 @@ body {
     width: 90vw;
     background-color: rgba(234, 228, 197, 0.75);
     font-size: 19px;
-    font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text, 'Times New Roman', serif;
+    font-family: Orbi, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, 'Times New Roman', serif;
 }
 
 h1,h2,h3,h4 {    
@@ -14,9 +14,9 @@ h1,h2,h3,h4 {
 .pages{
     float: right;
     width: 740px;
-}
-.pages img {
-    width: 100%;
+    img {
+        width: 100%;
+    }
 }
 
 p {
@@ -45,14 +45,18 @@ p:first-of-type {
     display: block;
     border: 1px solid;
 }
-.masthead{
-    width: 17em;
+.masthead {
     padding-top: 2em;
-}
-.masthead p{text-indent: 0;}
-.masthead p.title {
-    font-weight: bold;
-    margin: 1em 0;
+    p{
+        text-indent: 0;
+        &.title {
+            font-weight: bold;
+            margin: 1em 0;
+        }
+        &.bio{
+            width: 17em;
+        }
+    }
 }
 .author-page {
     padding-top: 4.6em;
@@ -60,43 +64,51 @@ p:first-of-type {
     font-style: italic;
     text-align: right;
 }
-.title-page{padding-top: 10em;}
-.title-page h1 {
-    font-style: italic;
-    font-weight: normal;
-    font-size: 230%;
+.title-page{
+    padding-top: 10em;
+    h1 {
+        font-style: italic;
+        font-weight: normal;
+        font-size: 230%;
+    }
 }
 img.penguin-logo {
     mix-blend-mode: multiply;
     height: 4em;
     transform: scaleX(-1);
 }
-.publisher-page{padding-top: 6em;}
-.publisher-page p{
-    font-size: 70%;
-    text-indent: 0;
-}
-.publisher-page p.warning {
-    width: 26em;
+.publisher-page{
+    padding-top: 6em;
+    p{
+        font-size: 70%;
+        text-indent: 0;
+        &.warning {
+            width: 28em;
+        }
+    }
 }
 .addresses, .published,.copyright,.printing,.warning{margin-bottom: 1em;}
 
 .dedication-page {
     padding-top: 12em;
 }
-section.contents p{text-indent: 0;}
-section.contents h1 {
-    margin-bottom: 4em;
-    font-size: 200%;
-}
-section.contents h2 {
-    margin-top: 2.4em;
-    margin-bottom: 1em;
-    font-size: 150%;
-}
-section.contents ol{
-    margin: 0 0 2em -1em;
-    font-size: 90%;
+section.contents{ 
+    p{
+        text-indent: 0;
+    }
+    h1 {
+        margin-bottom: 4em;
+        font-size: 200%;
+    }
+    h2 {
+        margin-top: 2.4em;
+        margin-bottom: 1em;
+        font-size: 150%;
+    }
+    ol{
+        margin: 0 0 2em -1em;
+        font-size: 90%;
+    }
 }
 figure {
     margin: 0;
