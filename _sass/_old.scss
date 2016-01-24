@@ -112,13 +112,15 @@ section.contents{
     }
 }
 
+.wrapper{position: relative;}
 span.footnote {
     display: block;
     width: 25em;
     position: absolute;
-    left: 80vw;
+    left: 41em;
     font-size: 80%;
     text-indent: -1em;
+    transform: translateY(-2em);
 }
 span.footnote-anchor::before {
     content: "*";
