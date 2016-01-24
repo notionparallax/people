@@ -22,16 +22,19 @@ p {
 p:first-of-type {
     text-indent: 0;
 }
+blockquote{
+    margin-left: 0;
+    margin-right: 0;
+}
 figure {
     margin: 0 0 2em 0;
     blockquote{
-        margin-left: 0;
-        margin-right: 0;
         text-align: left;
         p{text-align: left;}
     }
     figcaption {}
 }
+img.cover{width: 100%;}
 
 .masthead,
 .author-page,
