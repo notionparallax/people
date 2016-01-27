@@ -1,6 +1,6 @@
 #What's going on here?
 
-I'm Digitising Jonathan Glover's book, _What Sort of People  Should There Be?_
+I'm Digitising [Jonathan Glover](http://www.jonathanglover.co.uk/)'s book, _What Sort of People  Should There Be?_
 
 I really enjoyed this book when I read it about 8 years ago. I wanted to read it again but it's out of print.
 
