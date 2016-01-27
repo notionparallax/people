@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  if (window.matchMedia("(min-width: 400px)").matches) {
+  if (window.matchMedia("(min-width: 450px)").matches) {
     let breaks = document.querySelectorAll('span.page-break');
     for (let i in breaks) {
       let b = breaks[i];
