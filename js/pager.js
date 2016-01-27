@@ -11,10 +11,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       } else if (pageNumber.length === 2) {
         pageNumber = '0' + pageNumber;
       }
+      let filename = 'p_' + pageNumber + '.png';
       let pageImg = document.createElement("img");
       pageImg.setAttribute('class', 'page-scan');
-      pageImg.setAttribute('src', 'pageImg/p_' + pageNumber + '.png');
+      pageImg.setAttribute('src', 'pageImg' + filename);
       b.appendChild(pageImg);
+      ga('send', 'scan-load', filename);
     }
   }else{
     console.log("if you had a bigger screen you'd be seeing scans of the book too." );
