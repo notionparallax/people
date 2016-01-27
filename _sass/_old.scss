@@ -11,6 +11,8 @@ body {
   @include media-query($phone-screen) {
     margin: 0 auto;
     width: 90vw;
+
+    * { max-width: calc(100vw - 2em); }
     .page-break {display: none;}
   }
 }
@@ -26,6 +28,8 @@ h4 {
 h1 {
   font-size: 250%;
   margin-bottom: 5em;
+
+  @include media-query($phone-screen) {font-size: 180%;}
 }
 
 h2 {
@@ -38,6 +42,7 @@ h2 {
   text-indent: -4.3em;
 
   @include media-query($phone-screen) {
+    font-size: 170%;
     margin: 1em 0;
     text-indent: 0;
   }
