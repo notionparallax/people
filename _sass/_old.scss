@@ -1,5 +1,6 @@
 $phone-screen: 450px;
 $fusty-old-book-colour:  rgba(234, 228, 197, .75);
+$my-aside-colour: hsl(0, 8%, 71%);
 
 body {
   background-color: $fusty-old-book-colour;
@@ -271,7 +272,7 @@ span.footnote-anchor::before {
 }
 
 .page-scan {
-  left: -4.4em;
+  //left: -4.4em;
   left: 31em;
   position: absolute;
   transform: translateY(7.8em);
@@ -284,4 +285,21 @@ span.footnote-anchor::before {
   height: 10em;
   text-align: center;
   width: 30em;
+}
+
+header {
+  background-color: $my-aside-colour;
+  border-radius: 0 0 1em 1em;
+  font-family: sans-serif;
+  margin-bottom: 3em;
+  padding: 1em;
+
+  @include media-query($phone-screen) {
+    display: none;
+  }
+
+  h1 {
+    font-size: 200%;
+    margin-bottom: .5em;
+  }
 }
