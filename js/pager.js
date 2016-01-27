@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let filename = 'p_' + pageNumber + '.png';
       let pageImg = document.createElement("img");
       pageImg.setAttribute('class', 'page-scan');
-      pageImg.setAttribute('src', 'pageImg' + filename);
+      pageImg.setAttribute('src', 'pageImg/' + filename);
       b.appendChild(pageImg);
       ga('send', 'scan-load', filename);
     }
