@@ -85,10 +85,11 @@ figure {
     p {text-align: left;}
   }
 
-  figcaption {}
+  //figcaption {}
 }
-cite.guardian {text-transform: uppercase;}
-img.cover {width: 100%;}
+
+
+.cover {width: 100%;}
 
 .masthead,
 .author-page,
@@ -97,7 +98,8 @@ img.cover {width: 100%;}
 .dedication-page,
 .blank-page {
   display: block;
-  height:  243.2mm;
+  height: 243.2mm;
+
   @include media-query($phone-screen) {
     height: 100vh;
   }
@@ -115,15 +117,16 @@ img.cover {width: 100%;}
     }
 
     &.bio {
+      text-align: left;
       width: 17em;
     }
   }
 }
 
 .author-page {
-  padding-top: 4.6em;
   font-size: 250%;
   font-style: italic;
+  padding-top: 4.6em;
   text-align: right;
 }
 
@@ -137,7 +140,7 @@ img.cover {width: 100%;}
   }
 }
 
-img.penguin-logo {
+.penguin-logo {
   height: 4em;
   mix-blend-mode: multiply;
   transform: scaleX(-1);
@@ -151,6 +154,7 @@ img.penguin-logo {
     text-indent: 0;
 
     &.warning {
+      text-align: left;
       width: 28em;
     }
   }
@@ -166,7 +170,7 @@ img.penguin-logo {
   padding-top: 12em;
 }
 
-section.contents {
+.contents {
 
   p {
     text-indent: 0;
@@ -191,7 +195,7 @@ section.contents {
 
 .wrapper {position: relative;}
 
-span.footnote {
+.footnote {
   display: block;
   font-size: 80%;
   left: 41em;
@@ -212,9 +216,15 @@ span.footnote {
   }
 }
 
-span.footnote-anchor::before {
+.footnote-anchor::before {
   color: red;
   content: '*';
+}
+
+.letter {
+  h4 {font-variant: small-caps;}
+  figcaption {font-style: italic;}
+  cite {text-transform: uppercase;}
 }
 
 @media print {
@@ -230,17 +240,17 @@ span.footnote-anchor::before {
   }
 
   body {
-    -webkit-print-color-adjust: exact;
     //background-image: url("./page.png");
-    background-repeat: repeat-y;
-    background-position: left top;
-    background-size: 111mm 181mm;
-    max-width: initial;
     background-color: transparent;
+    background-position: left top;
+    background-repeat: repeat-y;
+    background-size: 111mm 181mm;
     font-size: 11pt;
-    padding: 7mm 0 7mm 13mm;
-    width: 105mm;
     margin: 0;
+    max-width: initial;
+    padding: 7mm 0 7mm 13mm;
+    -webkit-print-color-adjust: exact;
+    width: 105mm;
   }
 
   p {
