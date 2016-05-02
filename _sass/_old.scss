@@ -71,6 +71,13 @@ p:first-of-type {
   text-indent: 0;
 }
 
+q {opacity: .9;}
+
+q::before,
+q::after {
+  content: "'";
+}
+
 blockquote {
   font-size: 93%;
   line-height: 1.3;
