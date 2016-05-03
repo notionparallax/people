@@ -38,5 +38,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       console.log("if you had a bigger screen you'd be seeing scans of the book too.");
     }
 
-
+  function bodyClass(className){
+    console.log(className);
+    document.body.className =  className;
+  }
+  document.getElementById("crusty").onclick = function(){ bodyClass('old'); };
+  document.getElementById("flashy").onclick = function(){ bodyClass('new'); };
   });
