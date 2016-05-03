@@ -235,6 +235,21 @@ figure {
   cite {text-transform: uppercase;}
 }
 
+.index ul {
+    -webkit-column-count: 2;
+}
+
+.back-matter {
+  width:80%;
+  h3 {
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 0.4em;
+  }
+}
+
 @media print {
   @page {
     size: 111mm 181mm;
