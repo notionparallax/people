@@ -14,7 +14,7 @@
   //background-color: $fusty-old-book-colour;
   font-family: $body-font-family;
   font-size: $base-font-size;
-  margin: 0 3em;//auto;
+  margin: auto;
   width: 40em;
 
   @include media-query($phone-screen) {
@@ -140,8 +140,8 @@
       }
 
       &.bio {
-        text-align: left;
-        width: 17em;
+        //text-align: left;
+        //width: 17em;
       }
     }
   }
@@ -339,7 +339,7 @@
   }
 
   header {
-    background-color: $my-aside-colour;
+    //background-color: $my-aside-colour;
     border-radius: 0 0 1em 1em;
     margin-bottom: 3em;
     padding: 1em;

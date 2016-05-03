@@ -15,4 +15,5 @@ $small-screen: max-width 500px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "old", 
-        "new";
+        "new",
+        "print";
