@@ -8,6 +8,7 @@
   $small-font-size:  $base-font-size * .875;
 
   $phone-screen: 450px;
+  $base-colour: black;
   $fusty-old-book-colour:  rgba(234, 228, 197, .75);
   $my-aside-colour: hsl(0, 8%, 71%);
 
@@ -23,7 +24,7 @@
 
     * { max-width: calc(100vw - 2em); }
     .page-break {display: none;}
-  }
+  } 
 
   h1,
   h2,
@@ -229,12 +230,12 @@
     width: 20em;
 
     @include media-query($phone-screen) {
-      color: hsla(0, 0%, 0%, 0.5);
       float: right;
-      padding: .5em;
-      padding-left: 2em;
+      margin-left: 1em;
+      opacity: .6;
+      padding: 0;
       text-align: left;
-      transform: none;
+      transform: translateX(1em);
       width: 40%;
     }
   }
@@ -251,11 +252,23 @@
   }
 
   .index ul {
-      -webkit-column-count: 2;
+    -webkit-column-width: 10em;
+    list-style: none;
+
+    .new-letter { margin-top: .5em;}
+
+    li { 
+      margin-bottom: .25em;
+      padding: 0;
+    }
+
   }
 
   .back-matter {
     width: 80%;
+    @include media-query($phone-screen) {
+      width: initial;
+    }
 
     h3 {
       text-transform: uppercase;
@@ -263,6 +276,25 @@
 
     p {
       margin-bottom: .4em;
+    }
+  }
+
+  .page-break {
+    display: none;
+  }
+
+  header {
+    //background-color: $my-aside-colour;
+    margin-bottom: 3em;
+    padding: 1em;
+
+    @include media-query($phone-screen) {
+      display: none;
+    }
+
+    h1 {
+      font-size: 200%;
+      margin-bottom: .5em;
     }
   }
 
@@ -317,35 +349,6 @@
 
     .title-page h1 {
       font-style: italic;
-    }
-  }
-
-  .page-scan {
-    //left: -4.4em;
-    left: 31em;
-    position: absolute;
-    transform: translateY(7.8em);
-    width: 39.1em;
-    z-index: -10;
-  }
-
-  .page-break {
-    display: none;
-  }
-
-  header {
-    //background-color: $my-aside-colour;
-    border-radius: 0 0 1em 1em;
-    margin-bottom: 3em;
-    padding: 1em;
-
-    @include media-query($phone-screen) {
-      display: none;
-    }
-
-    h1 {
-      font-size: 200%;
-      margin-bottom: .5em;
     }
   }
 
