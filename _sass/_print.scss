@@ -2,33 +2,64 @@
   @page {
     size: 111mm 181mm;
     margin: 0;
+    margin-top: 15mm;
+    margin-bottom: 15mm;
   }
 
   .pages,
-  header {display: none;}
+  header {
+    display: none;
+  }
 
   h1 {
     page-break-before: always;
+    margin-bottom: 2em !important;
   }
 
   body {
-    //background-image: url("./page.png");
-    background-color: transparent;
-    background-position: left top;
-    background-repeat: repeat-y;
-    background-size: 111mm 181mm;
-    font-size: 11pt;
-    margin: 0;
+    // background-color: transparent;
+    // background-position: left top;
+    // background-repeat: repeat-y;
+    // background-size: 111mm 181mm;
+    font-size: 9pt !important;
+    margin: 0 !important;
     max-width: initial;
-    padding: 7mm 0 7mm 13mm;
+    padding-left: 18mm;
+    padding-right: 18mm;
     -webkit-print-color-adjust: exact;
-    width: 105mm;
+    width: 111mm !important;
   }
 
   p {
     line-height: 1em;
     orphans: 3;
     widows: 3;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .pagenumber {
+      display: inline !important;
+  }
+
+  .page-break {
+    display: block !important;
+    text-align: center;
+    page-break-after: always;
+
+    img {
+      display: none;
+    }
+  }
+
+  .cover {
+    // height: 181mm;
+    // left: 0;
+    // top: 0;
+    // width: 111mm !important;
   }
 
   .masthead,
