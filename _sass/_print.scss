@@ -1,33 +1,7 @@
 @media print {
-  @page {
-    size: 111mm 181mm;
-    margin: 0;
-    margin-top: 15mm;
-    margin-bottom: 15mm;
-  }
-
-  .pages,
-  header {
-    display: none;
-  }
 
   h1 {
     page-break-before: always;
-    margin-bottom: 2em !important;
-  }
-
-  body {
-    // background-color: transparent;
-    // background-position: left top;
-    // background-repeat: repeat-y;
-    // background-size: 111mm 181mm;
-    font-size: 9pt !important;
-    margin: 0 !important;
-    max-width: initial;
-    padding-left: 18mm;
-    padding-right: 18mm;
-    -webkit-print-color-adjust: exact;
-    width: 111mm !important;
   }
 
   p {
@@ -37,49 +11,135 @@
   }
 
   a {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
   }
 
-  .pagenumber {
-      display: inline !important;
+  header {
+    display: none;
   }
 
-  .page-break {
-    display: block !important;
-    text-align: center;
-    page-break-after: always;
+  // .old {
+  //   @page {
+  //     size: A4 landscape;
+  //     margin: 0;
+  //     margin-top: 15mm;
+  //     margin-bottom: 15mm;
+  //   }
 
-    img {
+  //   .page-scan {
+  //     filter: contrast(150%) grayscale(100%);
+  //   }
+
+  //   .page-break {
+  //     display: block !important;
+  //     text-align: center;
+  //     page-break-after: always;
+
+  //     img {
+  //       position: absolute;
+  //       right: 0;
+  //       display: block;
+  //     }
+  //   }
+  // }
+
+  .new {
+    column-count: 2;
+    column-gap: 10mm;
+    margin: 0;
+    width: 100% !important;
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+      margin-top: 35mm;
+      margin-bottom: 35mm;
+      margin-left:30mm;
+    }
+
+    .pages,
+    header {
       display: none;
     }
-  }
 
-  .cover {
-    // height: 181mm;
-    // left: 0;
-    // top: 0;
-    // width: 111mm !important;
-  }
+    h1, h2 {
+      page-break-before: always;
+    }
 
-  .masthead,
-  .author-page,
-  .title-page,
-  .publisher-page,
-  .dedication-page {
-    display: block;
-    height: 181mm;
-    page-break-before: always;
-    //border: 1px solid black;
-  }
+    h1 {
+      margin-bottom: 2em !important;
+    }
 
-  .author-page {
-    font-size: 300%;
-    font-style: italic;
-    padding-top: 30mm;
-  }
+    h2 {
+      text-indent: -4em;
+    }
 
-  .title-page h1 {
-    font-style: italic;
+    p {
+      padding-right: 30mm;
+    }
+
+    blockquote {
+      padding-left: 4mm;
+      padding-right: 20mm;
+      margin: 0;
+    }
+
+    body {
+      // background-color: transparent;
+      // background-position: left top;
+      // background-repeat: repeat-y;
+      // background-size: 111mm 181mm;
+      font-size: 9pt !important;
+      margin: 0 !important;
+      max-width: initial;
+      padding-left: 18mm;
+      padding-right: 18mm;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .footnote {
+      line-height: 1.6;
+      width: 50mm;
+      page-break-inside: avoid;
+      margin-left: 0;
+      transform: translateX(5em);
+    }
+
+    .pagenumber {
+        display: inline !important;
+    }
+
+    .page-break {
+      display: none;
+    }
+
+    .cover {
+      // height: 181mm;
+      // left: 0;
+      // top: 0;
+      // width: 111mm !important;
+    }
+
+    .masthead,
+    .author-page,
+    .title-page,
+    .publisher-page,
+    .dedication-page {
+      display: block;
+      // height: 181mm;
+      page-break-before: always;
+      //border: 1px solid black;
+    }
+
+    .author-page {
+      font-size: 300%;
+      font-style: italic;
+      padding-top: 30mm;
+    }
+
+    .title-page h1 {
+      font-style: italic;
+    }
   }
 }
