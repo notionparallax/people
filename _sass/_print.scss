@@ -47,6 +47,7 @@
   .new {
     column-count: 2;
     column-gap: 10mm;
+    font-size: 10pt;
     margin: 0;
     width: 100% !important;
 
@@ -55,7 +56,7 @@
       margin: 0;
       margin-top: 35mm;
       margin-bottom: 35mm;
-      margin-left:30mm;
+      margin-left: 30mm;
     }
 
     .pages,
@@ -63,7 +64,8 @@
       display: none;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       page-break-before: always;
     }
 
@@ -80,9 +82,9 @@
     }
 
     blockquote {
+      margin: 0;
       padding-left: 4mm;
       padding-right: 20mm;
-      margin: 0;
     }
 
     body {
@@ -90,7 +92,6 @@
       // background-position: left top;
       // background-repeat: repeat-y;
       // background-size: 111mm 181mm;
-      font-size: 9pt !important;
       margin: 0 !important;
       max-width: initial;
       padding-left: 18mm;
@@ -100,14 +101,14 @@
 
     .footnote {
       line-height: 1.6;
-      width: 50mm;
-      page-break-inside: avoid;
       margin-left: 0;
+      page-break-inside: avoid;
       transform: translateX(5em);
+      width: 50mm;
     }
 
     .pagenumber {
-        display: inline !important;
+      display: inline !important;
     }
 
     .page-break {
